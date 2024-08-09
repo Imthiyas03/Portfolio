@@ -1,20 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container">
     <h1 class="navbar-brand">Mohamed Imthiyas</h1>
-    <div class="navbar-toggler" id="navbarToggler">&#9776;</div>
-    <div class="navbar-collapse" id="navbarNav">
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="toggleNavbar()"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      &#9776;
+    </button>
+    <div
+      class="navbar-collapse"
+      [ngClass]="{ 'active': isNavbarActive }"
+      id="navbarNav"
+    >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="about">About-Me</a>
+          <a class="nav-link" routerLink="about" routerLinkActive="active" (click)="closeNavbar()">About-Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="resume">Resume</a>
+          <a class="nav-link" routerLink="resume" routerLinkActive="active" (click)="closeNavbar()">Resume</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="project">Projects</a>
+          <a class="nav-link" routerLink="project" routerLinkActive="active" (click)="closeNavbar()">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="contact">Contact</a>
+          <a class="nav-link" routerLink="contact" routerLinkActive="active" (click)="closeNavbar()">Contact</a>
         </li>
       </ul>
     </div>
@@ -38,10 +51,10 @@
         <div class="contact-item">
           <p><strong>Follow</strong></p>
           <div class="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" class="mr-2">
+            <a href="https://www.linkedin.com/in/mohamed-imthiyas-103b24246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="mr-2">
               <img src="assets/icons8-linkedin-50.png" alt="LinkedIn">
             </a>
-            <a href="https://www.instagram.com" target="_blank">
+            <a href="https://www.instagram.com/md.imthi_yas?igsh=MTM4ODUxcnZpaHI5ZA==" target="_blank">
               <img src="assets/icons8-instagram-30.png" alt="Instagram">
             </a>
           </div>
@@ -50,16 +63,3 @@
     </div>
   </div>
 </footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const navbarToggler = document.getElementById('navbarToggler');
-  const navbarNav = document.getElementById('navbarNav');
-
-  if (navbarToggler && navbarNav) {
-    navbarToggler.addEventListener('click', () => {
-      navbarNav.classList.toggle('active');
-    });
-  }
-});
-</script>

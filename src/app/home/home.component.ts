@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  isNavbarActive = false;
+
+  toggleNavbar() {
+    this.isNavbarActive = !this.isNavbarActive;
+  }
+
+  closeNavbar() {
+    if (this.isNavbarActive) {
+      this.isNavbarActive = false;
+    }
+  }
 }

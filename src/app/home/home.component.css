@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Mochiy+Pop+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+/* Navbar */
 .navbar {
-  height: 90px; 
+  height: 90px;
   width: 100%;
   font-family: 'Arial', sans-serif;
   display: flex;
@@ -16,8 +17,7 @@
   z-index: 5;
 }
 
-
-.navbar-brand{
+.navbar-brand {
   font-size: 34px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -40,11 +40,10 @@
 
 .nav-link {
   color: rgb(0, 0, 0) !important;
-  font-size: 18px; 
+  font-size: 18px;
   margin-left: 15px;
   font-family: "Maven Pro", sans-serif;
-    font-weight: normal;
-    color: #000;
+  font-weight: normal;
 }
 
 .nav-link:hover {
@@ -58,11 +57,11 @@
   font-family: 'Poppins', sans-serif;
   width: 100%;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  flex-wrap: wrap;
   box-sizing: border-box;
-  position: relative; /* Ensure footer doesn't overlap other elements */
+  position: relative;
   height: 90px;
 }
 
@@ -73,7 +72,6 @@
   align-items: center;
   flex-wrap: wrap;
 }
-
 
 .right-side {
   display: flex;
@@ -143,13 +141,12 @@
     width: 100%;
     z-index: 4;
     transition: max-height 0.3s ease;
-    max-height: 0; /* Initially hide the menu */
+    max-height: 0;
     overflow: hidden;
   }
 
   .navbar-collapse.active {
-    display: flex;
-    max-height: 300px; /* Adjust this value based on your menu height */
+    max-height: 300px;
   }
 
   .nav-link {
@@ -159,7 +156,7 @@
 
   .footer .container {
     flex-direction: column;
-    align-items: center; /* Center align items for better mobile view */
+    align-items: center;
     text-align: center;
     padding: 8px 0;
   }
@@ -174,7 +171,7 @@
     gap: 15px;
   }
 
-  .left-side p, .contact-item p {
+  .contact-item p {
     font-size: 14px;
   }
 }
@@ -192,7 +189,216 @@
     font-size: 14px;
   }
 
-  .left-side p, .contact-item p {
+  .contact-item p {
+    font-size: 12px;
+  }
+
+  .right-side {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.navbar {
+  height: 90px;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.navbar-brand {
+  font-size: 34px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.navbar-toggler {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.navbar-collapse.active {
+  display: flex;
+  max-height: 300px;
+}
+
+.nav-link {
+  color: rgb(0, 0, 0) !important;
+  font-size: 18px;
+  margin-left: 15px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: normal;
+}
+
+.nav-link:hover {
+  color: rgba(168, 127, 255, 0.866) !important;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 0;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  position: relative;
+  height: 90px;
+}
+
+.footer .container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.contact-item strong {
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+    padding: 0 10px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar-collapse.active {
+    max-height: 300px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  .right-side {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .contact-info {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .contact-item p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .contact-item p {
     font-size: 12px;
   }
 
