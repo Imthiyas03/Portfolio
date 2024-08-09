@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+.full-background {
+    background-color: #E6DACe;
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container for centering content */
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .toggler{
+    font-size: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #007BFF;
+  }
+  
+  /* Section title styling */
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+    margin-top: 80px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  
+  /* Projects container styling */
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Project card styling */
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    overflow: hidden;
+    flex: 1 1 calc(50% - 20px); /* Two cards per row with spacing */
+    margin: 10px;
+    position: relative;
+    border-radius: 5px;
+  }
+  
+  /* Text section styling */
+  .text-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Title and paragraph styling in text section */
+  .text-section h3 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .text-section p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  /* GitHub link styling */
+  .git-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .git-link:hover {
+    text-decoration: underline;
+  }
+  
+  .image-section {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  /* Image styling */
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  /* Button styling for image navigation */
+  .image-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 18px;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .image-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  /* Previous button positioning */
+  .prev-button {
+    left: 15px;
+  }
+  
+  /* Next button positioning */
+  .next-button {
+    right: 15px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Tablet view adjustments */
+  @media (max-width: 1024px) {
+    .project-card {
+      flex-direction: column;
+      flex: 1 1 100%;
+    }
+  
+    .text-section, .image-section {
+      width: 100%;
+    }
+  
+    .image-button {
+      display: none; /* Hide buttons on smaller screens to avoid clutter */
+    }
+  }
+  
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .text-section h3 {
+      font-size: 20px;
+    }
+  
+    .text-section p {
+      font-size: 14px;
+    }
+  
+    .git-link {
+      font-size: 14px;
+    }
+  
+    .image-button {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  
+  /* Extra small mobile view adjustments */
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 24px;
+    }
+  
+    .text-section h3 {
+      font-size: 18px;
+    }
+  
+    .text-section p {
+      font-size: 12px;
+    }
+  
+    .git-link {
+      font-size: 12px;
+    }
+  
+    .image-button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

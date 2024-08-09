@@ -28,6 +28,10 @@ html, body {
     box-sizing: border-box;
 }
 
+.toggler{
+    color: #007BFF;
+}
+
 .card {
     display: flex;
     flex-direction: column; /* Stack content vertically on smaller screens */
