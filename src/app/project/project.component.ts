@@ -15,16 +15,7 @@ export class ProjectComponent {
       images: ['assets/2.png', 'assets/3.png','assets/4.png','assets/5.png','assets/6.png'],
       currentImage: 'assets/1.png',
       currentIndex: 0
-    },
-    {
-      title: 'Project 2',
-      description: 'Description for project 2.',
-      gitLink: 'https://github.com/your-repository',
-      images: ['assets/project2-image1.jpg', 'assets/project2-image2.jpg'],
-      currentImage: 'assets/project2-image1.jpg',
-      currentIndex: 0
     }
-    // Add more projects as needed
   ];
 
   nextImage(project: Project) {
