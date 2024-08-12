@@ -86,6 +86,7 @@ h1 {
     font-size: 14px;
 }
 
+/* Default line style */
 .input-line::before {
     content: '';
     display: block;
@@ -98,9 +99,10 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
+/* Focused line style */
 .input-line input:focus + ::before,
 .input-line textarea:focus + ::before {
-    background: #E6DACE; /* Line color on focus */
+    background: #333; /* Dark line color on focus */
 }
 
 textarea {
@@ -175,4 +177,10 @@ button:hover {
     button {
         font-size: 14px;
     }
+}
+
+/* Focus effect with darker line color */
+.input-line input:focus::before,
+.input-line textarea:focus::before {
+    background: #333; /* Dark line color when focused */
 }
