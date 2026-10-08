@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  stack = ['C#', '.NET Core', 'Web API', 'Entity Framework', 'Angular', 'TypeScript', 'RxJS', 'SQL Server', 'PostgreSQL', 'Docker'];
 }

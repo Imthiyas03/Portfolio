@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   isNavbarActive = false;
+  year = new Date().getFullYear();
 
   toggleNavbar() {
     this.isNavbarActive = !this.isNavbarActive;
