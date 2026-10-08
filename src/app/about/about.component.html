@@ -1,24 +1,31 @@
-<div class="full-page">
-    <div class="container">
-      <div class="card">
-        <div class="card-left">
-          <img src="assets/profile.jpg" alt="Profile Picture" class="profile-image">
-          <h3 class="name">Mohamed</h3>
-          <h3 class="name">Imthiyas</h3>
-          <h4 class="line">____</h4>
-          <p class="role">Software Developer</p>
-        </div>
-        <div class="card-right">
-          <h1 class="hello"><span class="toggler">&#9706;</span> Hello</h1>
-          <!-- <h3 calss="des1">Here's who I am & what I do</h3> -->
-          <p class="description">I’m Mohamed Imthiyas, a software developer with a degree in BE-CSE from Anna University. Having recently started my career in the tech industry, I am currently working with .NET and Angular.</p>
-          <p class="description"> My education, combined with my hands-on experience in real-world projects, has provided me with a solid foundation in programming and problem-solving skills. I am passionate about creating efficient, scalable, and user-friendly applications.</p>
-          <div class="buttons">
-            <a routerLink="resume" class="btn btn-primary">Resume</a>
-            <a routerLink="project" class="btn btn-primary">Projects</a>
-          </div>
-        </div>
+<section class="page wrap">
+  <div class="hero">
+    <div class="intro">
+      <span class="status"><i></i> Available for work</span>
+      <h1>Hi, I'm Mohamed Imthiyas —<br><span class="grad-text">Software Developer</span> crafting scalable web apps.</h1>
+      <p class="lead">BE-CSE graduate from Anna University, building full-stack products with <b>.NET</b> and <b>Angular</b>. I'm passionate about creating efficient, scalable and user-friendly applications.</p>
+      <div class="actions">
+        <a routerLink="/project" class="btn btn-primary">View Projects →</a>
+        <a routerLink="/resume" class="btn">Resume</a>
+      </div>
+    </div>
+    <div class="photo glass">
+      <img src="assets/profile.jpg" alt="Mohamed Imthiyas">
+    </div>
+  </div>
+
+  <div class="bento">
+    <div class="tile glass wide">
+      <span class="eyebrow">About</span>
+      <p>My education, combined with hands-on experience in real-world projects, has given me a solid foundation in programming and problem-solving. I enjoy turning complex requirements into clean, maintainable code.</p>
+    </div>
+    <div class="tile glass stat"><h2 class="grad-text">2024</h2><p>Started as SDE at Uncia Technologies</p></div>
+    <div class="tile glass stat"><h2 class="grad-text">4+</h2><p>Core technologies in daily use</p></div>
+    <div class="tile glass wide">
+      <span class="eyebrow">Stack</span>
+      <div class="chips">
+        <span class="chip" *ngFor="let s of stack">{{ s }}</span>
       </div>
     </div>
   </div>
-  
+</section>

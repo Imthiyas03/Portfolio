@@ -15,6 +15,9 @@ export class ContactComponent {
     message: ''
   };
 
+  sending = false;
+  status = '';
+
   constructor() { }
 
   onSubmit() {
@@ -25,13 +28,17 @@ export class ContactComponent {
       message: this.form.message
     };
 
+    this.sending = true;
+    this.status = '';
     emailjs.send('service_uqr8agx', 'template_elai1tr', templateParams, '0piBcZt4OpK7cxihh')
       .then((result) => {
         console.log(result.text);
-        alert('Message sent successfully!');
+        this.sending = false;
+        this.status = 'Message sent successfully!';
       }, (error) => {
         console.log(error.text);
-        alert('Error sending message.');
+        this.sending = false;
+        this.status = 'Error sending message. Please try again.';
       });
 
     // Reset form after submission
