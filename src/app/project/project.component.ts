@@ -17,7 +17,16 @@ export class ProjectComponent {
       currentImage: 'assets/inv-8.png',
       currentIndex: 0
     },
-        {
+    {
+      title: 'Help Desk Ticketing System',
+      description: 'A support platform for a software product team. Customers report bugs, production incidents, API and integration issues, performance problems and data-fix requests from a self-service portal, with module, environment, app version and steps to reproduce. Tickets follow a three-level support model: L1 Service Desk triages and resolves known issues, L2 Application Support investigates logs, data and integrations, and L3 Engineering delivers code fixes and hotfixes. A rule engine routes each ticket to the right level and team (production P1 incidents go straight to the L3 on-call engineer), agents escalate or de-escalate with a hand-over note, escalation to L3 requires a linked Jira item, and P1/P2 tickets still at L1 after 30 minutes move to L2 automatically. SLA timers run in business hours, pause while waiting on the customer or a release, and trigger alerts at 75%, 100% and 150%. A live Kanban board by level uses SignalR, the knowledge base suggests known issues and release notes as users type, and reports cover L1 resolution rate, L3 escalation rate and SLA compliance. Built with Angular 16, .NET 8 Web API, SignalR and MS SQL Server.',
+      gitLink: 'https://github.com/Imthiyas03',
+      tags: ['Angular 16', '.NET 8', 'SignalR', 'MS SQL', 'L1/L2/L3 Support', 'SLA Engine', 'Auto-Escalation'],
+      images: ['assets/hd-1.png', 'assets/hd-2.png', 'assets/hd-3.png', 'assets/hd-4.png', 'assets/hd-5.png', 'assets/hd-6.png', 'assets/hd-7.png', 'assets/hd-8.png', 'assets/hd-9.png'],
+      currentImage: 'assets/hd-1.png',
+      currentIndex: 0
+    },
+    {
       title: 'Mobile Shopping Application',
       description: 'The Mobile Shopping Platform is a web application designed to streamline mobile device sales, featuring distinct dashboards for both users and administrators. Users can securely register, log in, browse products, make purchases, and manage their orders, while admins can add, edit, and delete products, manage user accounts, and view detailed product listings. Built with a technology stack that includes .NET Core 8 for the backend—utilizing Repository and DTO patterns, AutoMapper, Entity Framework, and MS SQL—and Angular for the frontend with Dependency Injection, Reactive Forms, JWT Validation, and Local Storage, the platform offers a responsive design that ensures a seamless experience across all devices, along with secure authentication and efficient data handling.',
       gitLink: 'https://github.com/Imthiyas03',
